@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useRouteMatch } from 'react-router-dom';
+import { NavLink, Route, useRouteMatch } from 'react-router-dom';
 import * as bookShelfAPI from '../../services/bookshelf-api';
 import PageHeading from '../../components/PageHeading/PageHeading';
-// import AuthorSubView from './AuthorSubView';
+import AuthorSubView from '../AuthorSubView/AuthorSubView';
 
 export default function AuthorsView() {
-	const { url } = useRouteMatch();
+	const { url, path } = useRouteMatch();
 	const [authors, setAuthors] = useState(null);
 
 	useEffect(() => {
@@ -27,9 +27,9 @@ export default function AuthorsView() {
 			)}
 			<hr />
 
-			{/* <Route path={`${path}/:authorId`}>
+			<Route path={`${path}/:authorId`}>
 				{authors && <AuthorSubView authors={authors} />}
-			</Route> */}
+			</Route>
 		</>
 	);
 }

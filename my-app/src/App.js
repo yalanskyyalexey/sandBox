@@ -18,11 +18,11 @@ export default function App() {
 					<HomeView />
 				</Route>
 
-				<Route path='/autors'>
+				<Route path='/authors'>
 					<AuthorsView />
 				</Route>
 
-				<Route path='/books'>
+				<Route path='/books' exact>
 					<BooksView />
 				</Route>
 
