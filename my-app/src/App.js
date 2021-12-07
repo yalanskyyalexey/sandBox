@@ -5,6 +5,7 @@ import HomeView from './views/HomeView/HomeView';
 import AuthorsView from './views/AuthorsView/AuthorsView';
 import BooksView from './views/BooksView/BooksView';
 import BookDetailsView from './views/BookDetailsView/BookDetailsView';
+import TableView from './views/TableView/TableView';
 import NotFoundView from './views/NotFoundView/NotFoundView';
 
 import './App.css';
@@ -29,7 +30,9 @@ export default function App() {
 				<Route path='/books/:bookId'>
 					<BookDetailsView />
 				</Route>
-
+				<Route path='/table'>
+					<TableView />
+				</Route>
 				<Route>
 					<NotFoundView />
 				</Route>
